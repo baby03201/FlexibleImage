@@ -66,8 +66,8 @@ internal class ImageFilter {
                         commandEncoder.setComputePipelineState(pipeline)
                         
                         // Set texture
-                        commandEncoder.setTexture(device.outputTexture!, at: 0)
-                        commandEncoder.setTexture(device.texture!, at: 1)
+                        commandEncoder.setTexture(device.outputTexture!, index: 0)
+                        commandEncoder.setTexture(device.texture!, index: 1)
                     }
                     
                     let retValue = self.processMetal(device, commandBuffer, commandEncoder)
